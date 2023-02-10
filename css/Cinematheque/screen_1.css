@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* media quary */
+@media (max-width:1700px) { /* max-width:1600px 일때 */
+    .inner { max-width: calc(100% - 160px); } /* 왼, 오 160px(80,80)으로 변경된다 */
+}
+@media (max-width:1400px) { /* max-width:1400px 일때 */
+    .inner { max-width: calc(100% - 140px); } /* 왼, 오 140px(70,70)으로 변경된다 */
+}
+@media (max-width:1200px) { /* max-width:1200px 일때 */
+    .inner { max-width: calc(100% - 120px); } /* 왼, 오 120px(60,60)으로 변경된다 */
+}
+@media (max-width:1024px) { /* max-width:1024px 일때 */
+    .inner { max-width: calc(100% - 100px); } /* 왼, 오 160px(50,50)으로 변경된다 */
+}
+@media (max-width:768px) { /* max-width:768px 일때(mobile 사이즈) */
+    .inner { max-width: calc(100% - 40px); } /* 왼, 오 160px(20,20)으로 변경된다 */
+}
+
+/* depth2 */
+.depth2 {width: 1000px; display: flex; justify-content: center; content: ''; }
+.depth2 > li { float: left; padding: 0 20px; }
+
+.depth2 > li:nth-child(1) > a { opacity: 1; }
+.depth2 > li:nth-child(1) > a:after { padding-bottom: 4px; display:block; content: ''; border-bottom: solid 2px #EBD790; transform: scaleX(0.5); transition: transform 0.5s ease-in-out; }
+
+/* search */
+#container .search { position: absolute; left: 50%; top: 23%; width: 200px; transform: translateX(-50%); }
+#container .search input { width: 100%; border: 1px solid #bbb; border-radius: 50px;  padding: 10px 12px; font-size: 1.4rem; }
+#container .search input::placeholder { color: #0A693A; }
+#container .search img { position : absolute; width: 17px; top: 10px; right: 12px; margin: 0; cursor: pointer; }
+
+#container .box { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); margin-top: 60px; }
+#container .movie { content: ''; display: flex; justify-content: space-between; color: #EBD790; position: relative; padding: 35px 100px 25px; border-bottom: 1px solid #EBD790; width: 1180px; height: 190px; margin: 0 auto; top: 20px; align-items: center; }
+#container .movie:nth-of-type(4) { border-bottom: 0; }
+#container .movie h1 img { position: relative; left: 0; top: 0; border-radius: 30px 10px 10px 10px; width: 130px; }
+
+#container .movie .txt { position: absolute; left: 280px; }
+#container .movie:nth-child(3) .txt { position: absolute; left: 280px; }
+#container .movie .txt h2 { font-size: 2.2rem; letter-spacing: 2px; }
+#container .movie .txt dt { padding-top: 10px; font-size: 1.8rem; }
+#container .movie .txt dd { padding-top: 10px; font-weight: 300; font-size: 1.5rem; }
+#container .movie .txt dd:nth-of-type(2) { padding-top: 0; }
+
+#container .movie .rev li { padding-top: 10px; }
+#container .movie .rev li:nth-of-type(2) { padding-top: 10px; }
+#container .movie .rev li a { transition: background 1s; display: block; color: #EBD790; text-align: center; border: 2px solid #EBD790; border-radius: 30px; width: 150px; height: 48px; font-weight: 500; font-size: 1.45rem; }
+#container .movie .rev li:nth-child(1) a { padding-top: 1.5px; }
+#container .movie .rev li:nth-child(2) a { padding-top: 12px; }
+#container .movie .rev li a:hover { background: #EBD790; color: #0A693A; font-weight: 500; }
+
+/* modal */
+.modal { z-index: 999; position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.5); width: 100%; height: 100%; }
+.box .inner { z-index: 9999; position: absolute; width: 1200px; height: 500px; background: #EBD790; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 100px 10px 10px 10px; border: 1.5px solid #052F1A; box-shadow: 5px 5px 5px rgba(0,0,0,0.2); }
+.modal .inner { padding: 0 25px; content: ''; display: flex; justify-content: space-between; color: #052F1A; align-items: center; height: 480px; }
+
+.modal .m_img img { width: 300px; border-radius: 80px 10px 10px 10px; }
+
+.modal .inner .m_txt .m_info li .tap { transition: color 1s, background 1s; cursor: pointer; display: inline-block; font-size: 1.7rem; position: absolute; background: #EBD790; left:37%; top: -69px; width: 200px; text-align: center; border: 1.5px solid #052F1A; padding: 6px; border-radius: 10px 10px 0 0; font-weight: 500; margin-top: 2px; }
+.modal .inner .m_txt .m_info li:nth-child(1) .tap { border-radius: 50px 10px 0 0; }
+.modal .inner .m_txt .m_info li:nth-child(2) .tap { left: 63.5%; background: #F0E3B4; color: rgb(5, 47, 26,0.5); }
+.modal .inner .m_txt .m_info li:nth-child(3) .tap { left: 90%; background: #F0E3B4; color: rgb(5, 47, 26,0.5);}
+.modal .inner .m_txt .m_info li .tap:hover { color: #052F1A; background: #EBD790; }
+
+.modal .m_txt { padding: 20px 0 0 40px; position: absolute; left: 320px; }
+.modal .m_txt h1 { font-size: 4rem; padding-bottom: 10px; }
+.modal .m_txt .txt { padding-bottom: 15px; font-size: 2rem; border-bottom: 1.5px solid #0A693A; width: 700px; }
+.modal .m_txt .txt li:nth-child(3) { margin-left: 130px; font-size: 1.7rem; }
+.modal .m_txt .txt span { font-size: 1.7rem; }
+
+.modal .m_txt dl { padding-top: 20px; }
+.modal .m_txt dl h2 { font-size: 2rem; padding-bottom: 10px; }
+.modal .m_txt dl dd { font-weight: 600; }
+.modal .m_txt p { padding-top: 20px; font-size: 1.2rem; }
+
+.modal .close { cursor: pointer; position: absolute; right: 30px; top: 40px; }
+
+/* media query */
+@media (max-width:1200px) {
+    #header h1 img { width: 150px; }
+    #header .gnb > li:first-child { font-size: 3.2rem; }
+    #header .depth2 > li > a { font-size: 1.8rem; }
+
+    #container .movie { padding: 30px 80px 20px; width: 1000px; }
+    #container .movie .txt h2 { font-size: 2rem; }
+    #container .movie .txt dt { font-size: 1.5rem; }
+    #container .movie .txt dd { font-size: 1.3rem; }
+
+    .modal .box { width: 1000px; height: 400px; padding: 20px 0; }
+    .modal .inner { height: 380px; margin: 0; }
+    .modal .m_img img { width: 200px; }
+    .modal .m_txt { padding: 0; }
+    .modal .m_txt h1 { font-size: 3.5rem; }
+    .modal .m_txt .txt { font-size: 1.5rem; width: 650px; }
+    .modal .m_txt .txt span { font-size: 1.3rem; }
+    .modal .m_txt .txt li:nth-child(3) { margin-left: 85px; font-size: 1.3rem; }
+    .modal .inner .m_txt .m_info { height: 360px; align-items: center; display: flex; margin-left: -50px; }
+    .modal .inner .m_txt .m_info li .tap { width: 180px; font-size: 1.5rem; top: -47px; margin-left: -10px; }
+    .modal .m_txt dl h2 { font-size: 1.8rem; }
+    .modal .m_txt dl dd { font-size: 1.5rem; }
+    .modal .m_txt p { font-size: 1rem; padding-top: 10px; }
+
+    #container .btn span a img { width: 25px; }
+}
+
+@media (max-width:1024px) {
+    .mgnb_wrap { width: 40%; margin-left: 60%; border-left: 1px solid #EBD790;}
+
+    #header { margin-top: 50px; }
+    #header h1 img { margin-top: -20px; position: absolute; left: 50%; transform: translateX(-50%); }
+    #header .gnb {display: block; margin-top: 60px; }
+    #header .gnb > li:first-child { font-size: 3rem;}
+    #header .gnb > li > .depth2 li {  padding: 0 10px;  }
+    #header .gnb > li > .depth2 li a { font-size: 1.5rem; }
+
+    .depth2 { width: 800px; }
+
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 100px; top: 0; cursor: pointer; }
+    #header .m_menu img { width: 40px; }
+ 
+    #container .search {  top: 30%;  }
+    #container .search input { height: 30px; }
+    #container .search img { top: 6px;}
+
+    #container .box { margin-top: 80px; }
+
+    #container .movie { padding: 10px 60px 10px; width: 800px; height: 170px; }
+    #container .movie h1 { margin-left: -20px; }
+
+    #container .movie .txt { margin-left: -70px; }
+    #container .movie .txt h2 { font-size: 2rem; }
+    #container .movie .txt dt { font-size: 1.5rem; }
+    #container .movie .txt dd { font-size: 1.3rem; }
+
+    #container .movie .rev { margin-right: -30px; }
+    #container .movie .rev li a { font-size: 1.2rem; }
+    #container .movie .rev li:nth-child(1) a { padding-top: 4.5px; }
+
+    .modal .box .inner { width: 760px; height: 350px; padding: 20px 0; }
+    .modal .m_img img { width: 190px; margin-left: 25px;}
+
+    .modal .m_txt { padding-top: 10px; }
+    .modal .m_txt h1 { font-size: 2.8rem; }
+    .modal .m_txt .txt { font-size: 1.3rem; width: 580px; }
+    .modal .m_txt .txt span { font-size: 1.2rem; }
+    .modal .m_txt .txt li:nth-child(3) { margin-left: 85px; font-size: 1.3rem; }
+
+    .modal .inner .m_txt .m_info { height: 360px; margin-left: -80px; }
+    .modal .inner .m_txt .m_info li .tap { left: -20%; width: 180px; font-size: 1rem; margin-left: 0; margin-top: 29px; }
+    .modal .inner .m_txt .m_info li:nth-child(2) .tap { left: 15%; }
+    .modal .inner .m_txt .m_info li:nth-child(3) .tap { left: 50%; }
+    .modal .m_txt dl h2 { font-size: 1.2rem; }
+    .modal .m_txt dl dd { font-size: 1.1rem; }
+    .modal .m_txt p { font-size: 0.6rem; padding-top: 5px; width: 500px; }
+    .modal .close { right: 30px; top: 20px; }
+
+
+    #container .btn span a img { width: 30px; bottom: 60px; }
+}
+
+@media (max-width:768px) {
+    .mgnb_wrap { width: 100%; margin-left: 0; border-left: none;}
+
+    #header { margin-top: 20px; }
+    #header h1 img { display: none; }
+
+    #header .gnb {display: block; margin: 10px 0 0 0 ; }
+    #header .gnb > li:first-child { font-size: 2rem; margin-top: 20px; }
+    #header .depth2 > li > a { font-size: 1.5rem; }
+    #header .gnb > li > .depth2 li a { font-size: 1rem; }
+
+    .depth2 { width: 480px; }
+
+    #header .m_logo { display: block; position: absolute; left: 50%; top: -30px; transform: translateX(-50%);  }
+    #header .m_logo img {width: 120px;}
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 30px; top: 0; cursor: pointer;  margin-top: -10px; }
+    #header .m_menu img { width: 30px; }
+
+    #container .search { width: 120px; top: 32%; left: 50%; margin-left: 0; }
+    #container .search input { padding: 5px 8px; font-size: 1rem; height: 20px; }
+    #container .search img { width: 10px; padding-top: 2px; }
+
+    #container .box { margin-top: 80px; }
+
+    #container .movie { margin-top: 10px; padding: 5px; width: 340px; height: 110px; }
+    #container .movie h1 { margin-left: 0; }
+    #container .movie h1 img { width: 60px; height: 80px; }
+    #container .movie .txt { margin-left: -200px; }
+    #container .movie .txt h2 { font-size: 1rem; }
+    #container .movie .txt dt { font-size: 0.8rem; }
+    #container .movie .txt dd { font-size: 0.8rem; }
+
+    #container .movie .rev { margin-right: -10px; }
+    #container .movie .rev li { padding-top: 0; }
+    #container .movie .rev li a { width: 75px; height: 35px; font-size: 1rem; border: 1px solid #EBD790; }
+    #container .movie .rev li:nth-child(1) a { padding-top: 0; display: none; }
+    #container .movie .rev li:nth-child(2) a { margin-top: -10px; padding-top: 2px; }
+
+    #container .btn { display: none;}
+}

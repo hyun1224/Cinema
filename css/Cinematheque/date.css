@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* media quary */
+@media (max-width:1700px) { /* max-width:1600px 일때 */
+    .inner { max-width: calc(100% - 160px); } /* 왼, 오 160px(80,80)으로 변경된다 */
+}
+@media (max-width:1400px) { /* max-width:1400px 일때 */
+    .inner { max-width: calc(100% - 140px); } /* 왼, 오 140px(70,70)으로 변경된다 */
+}
+@media (max-width:1200px) { /* max-width:1200px 일때 */
+    .inner { max-width: calc(100% - 120px); } /* 왼, 오 120px(60,60)으로 변경된다 */
+}
+@media (max-width:1024px) { /* max-width:1024px 일때 */
+    .inner { max-width: calc(100% - 100px); } /* 왼, 오 160px(50,50)으로 변경된다 */
+}
+@media (max-width:768px) { /* max-width:768px 일때(mobile 사이즈) */
+    .inner { max-width: calc(100% - 40px); } /* 왼, 오 160px(20,20)으로 변경된다 */
+}
+
+
+/* depth2 */
+.depth2 { width: 300px; display: flex; justify-content: center; content: ''; }
+
+.depth2 > li:nth-child(1) > a { opacity: 1; }
+.depth2 > li:nth-child(1) > a:after { padding-bottom: 4px; display:block; content: ''; border-bottom: solid 2px #EBD790; transform: scaleX(0.5); transition: transform 0.5s ease-in-out; }
+
+
+
+/* container */
+#container .calendar{ color: #EBD790; position: absolute; left: 50%; top: 57%; transform: translate(-50%,-50%); text-align: center; }
+#container h1 { font-size: 3.5rem; font-weight: 700; }
+#container h2 { font-size: 2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 5px; padding: 10px 0 20px; }
+
+#container .calendar table { border-collapse: separate; border-spacing: 2px; width: calc(100% / 7); margin: 0 auto; }
+#container .calendar .day { font-size: 1.5rem; font-weight: 500; }
+#container .calendar tr td { padding: 10px 20px; }
+#container .calendar tr td a { transition: background 1s; display: inline-block; color: #EBD790; vertical-align: bottom; width: 50px; height: 50px; border-radius: 50%; padding-top: 13px; }
+#container .calendar tr td a:hover,#container .calendar tr td a.active { background: #EBD790; color: #0A693A; font-weight: 700; }
+#container .calendar tr:nth-child(7) td:nth-child(n+3):nth-child(-n+7) a { opacity: 0.5; }
+
+/* modal */
+.modal {  z-index: 999; position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.5); width: 100%; height: 100%; }
+.box { z-index: 9999; position: absolute; width: 350px; height: 460px; background: #EBD790; left: 50%; top: 50%; transform: translate(-50%,-50%); padding: 15px; border-radius: 15px; box-shadow: 5px 5px 5px rgba(0,0,0,0.2); }
+.modal .img .movie { float: left; width: 150px; border-radius: 15px; display: block; margin: 5px 0 20px; }
+
+.modal .book_mark img { position: absolute; right: 20px; top: 20px; width: 20px; cursor: pointer; }
+
+.modal .img .num { float: right; }
+.modal .img .num form { position: absolute; top: 170px; left: 51%; border: 2px solid #0A693A; border-radius: 20px; }
+.modal .img .num form input { width: 25px; height: 15px; text-align: center; background: #EBD790; font-size: 1.6rem; font-weight: 600; color: #0A693A; cursor: pointer; border-radius: 50%; }
+
+.modal .img .num li a { position: absolute; top: 205px; left: 50%;  transition: background 1s; background: #0A693A; border-radius: 15px; color: #EBD790; font-weight: 500; width: 120px; height: 30px; display: inline-block; text-align: center; padding-top: 2px; }
+.modal .img .num li:last-child a:hover { background: #052F1A; }
+
+.modal .txt { color: #0A693A; }
+.modal .txt h1 { font-size: 1.5rem; font-weight: 900; padding: 20px 0 10px; border-top: 1px solid rgba(10, 105, 58, 0.7); }
+.modal .txt ul li { font-size: 1.2rem; padding: 1px 0; }
+
+/* media query */
+@media (max-width:1200px) {
+    #header h1 img { width: 150px; }
+    #header .gnb > li:first-child { font-size: 3.2rem; }
+    #header .depth2 > li > a { font-size: 1.8rem; }
+
+    #container .btn span a img { width: 25px; }
+}
+
+@media (max-width:1024px) {
+    .mgnb_wrap { width: 40%; margin-left: 60%; border-left: 1px solid #EBD790;}
+
+    #header { margin-top: 50px; }
+    #header h1 img { margin-top: -20px; position: absolute; left: 50%; transform: translateX(-50%); }
+    #header .gnb {display: block; margin-top: 50px; }
+
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 100px; top: 0; cursor: pointer; }
+    #header .m_menu img { width: 40px; }
+
+    #container .btn span a img { width: 30px; bottom: 60px; }
+}
+
+@media (max-width:768px) {
+    .mgnb_wrap { width: 100%; margin-left: 0; border-left: none;}
+
+    #header { margin-top: 20px; }
+    #header h1 img { display: none; }
+
+    #header .gnb {display: block; margin-top: 10px; }
+    #header .gnb > li:first-child { font-size: 2rem; margin-top: 20px; }
+    #header .depth2 > li > a { font-size: 1.5rem; }
+
+    #header .m_logo { display: block; position: absolute; left: 50%; top: -30px; transform: translateX(-50%);  }
+    #header .m_logo img {width: 120px;}
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 30px; top: 0; cursor: pointer;  margin-top: -10px; }
+    #header .m_menu img { width: 30px; }
+
+    #container .calendar { margin-top: 40px; }
+    #container .calendar h1 {font-size: 2rem; }
+    #container .calendar h2 { font-size: 1.5rem; }
+    #container .calendar .day { font-size: 1rem; }
+    #container .calendar tr td { padding: 5px; }
+    #container .calendar tr td a { font-size: 1.3rem; width: 30px; height: 30px; padding-top: 5px; }
+
+    .box { width: 250px; height: 400px; }
+    .modal .img .movie { width: 120px; margin: 5px 0 20px; }
+    .modal .book_mark img { width: 15px; }
+    
+    .modal .img .num form { top: 125px; left: 58%; }
+    .modal .img .num form input { width: 20px; height: 10px; font-size: 1.3rem; margin-top: -5px; }
+
+    .modal .img .num li a { font-size: 1.2rem; top: 160px; width: 90px; left: 58%; padding-top: 5.5px; }
+
+    .modal .txt h1 {font-size: 1.2rem; }
+    .modal .txt ul li { font-size: 1rem; }
+
+    #container .btn { display: none;}
+}

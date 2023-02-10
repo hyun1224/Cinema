@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* animation */
+@keyframes fadeUp_1 {
+    0% {
+        transform:translateY(0);
+        -webkit-transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+        opacity:0;
+   }
+   40% {
+    transform:translateY(30px);
+    -webkit-transform:translateY(30px);
+    -moz-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    opacity:0;
+}
+    100% {
+       transform:translateY(0);
+        -webkit-transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes fadeUp_2 {
+    0% {
+        transform:translateY(0);
+        -webkit-transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+        opacity:0;
+   }
+   70% {
+    transform:translateY(30px);
+    -webkit-transform:translateY(30px);
+    -moz-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    opacity:0;
+}
+    100% {
+       transform:translateY(0);
+        -webkit-transform:translateY(0);
+        -moz-transform:translateY(0);
+        -ms-transform:translateY(0);
+        opacity:1;
+    }
+}
+
+#container .txt { animation: fadeUp 3s; }
+#container .place { animation: fadeUp_1 3s; }
+#container p { animation: fadeUp_2 3s; }
+
+/* media quary */
+@media (max-width:1700px) { /* max-width:1600px 일때 */
+    .inner { max-width: calc(100% - 160px); } /* 왼, 오 160px(80,80)으로 변경된다 */
+}
+@media (max-width:1400px) { /* max-width:1400px 일때 */
+    .inner { max-width: calc(100% - 140px); } /* 왼, 오 140px(70,70)으로 변경된다 */
+}
+@media (max-width:1200px) { /* max-width:1200px 일때 */
+    .inner { max-width: calc(100% - 120px); } /* 왼, 오 120px(60,60)으로 변경된다 */
+}
+@media (max-width:1024px) { /* max-width:1024px 일때 */
+    .inner { max-width: calc(100% - 100px); } /* 왼, 오 160px(50,50)으로 변경된다 */
+}
+@media (max-width:768px) { /* max-width:768px 일때(mobile 사이즈) */
+    .inner { max-width: calc(100% - 40px); } /* 왼, 오 160px(20,20)으로 변경된다 */
+}
+
+/* depth2 */
+.depth2 { width: 1000px; display: flex; justify-content: center; content: ''; }
+
+.depth2 > li:nth-child(1) > a { opacity: 1; }
+.depth2 > li:nth-child(1) > a:after { padding-bottom: 4px; display:block; content: ''; border-bottom: solid 2px #EBD790; transform: scaleX(0.5); transition: transform 0.5s ease-in-out; }
+
+/* container */
+#container { height: 100vh; text-align: center; }
+#container .inner { margin-top: 260px; }
+#container .txt h2 { color: #EBD790; font-size: 2.3rem; margin-top: -20px; }
+#container .txt h3 { color: #EBD790; font-size: 1.8rem; font-weight: 400; padding-top: 5px;}
+
+#container .place .p_inner { padding: 0 200px; }
+
+#container .place ul { padding: 20px 0; display: flex; justify-content: space-between; flex-wrap: wrap; }
+#container .place ul li { transition: width 1s, opacity 1s; position: relative; width: calc((50% - 60px)/3); height: 480px; opacity: 0.5; }
+#container .place ul li:nth-of-type(1) { background: url('../../images/sub/Cinematheque/r_1.jpg') no-repeat center center; background-size: cover; border-radius: 115px 0 0 15px; }
+#container .place ul li:nth-of-type(2) { background: url('../../images/sub/Cinematheque/r_2.jpg') no-repeat center center; background-size: cover; }
+#container .place ul li:nth-of-type(3) { background: url('../../images/sub/Cinematheque/r_3.jpg') no-repeat center center; background-size: cover; }
+#container .place ul li:nth-of-type(4) { background: url('../../images/sub/Cinematheque/r_4.png') no-repeat center center; background-size: cover; border-radius: 0 15px 115px 0; }
+
+#container .place ul li a { transition: color 1s, background 1s ; position: absolute; bottom: 20px; left: 50%; transform: translate(-50%,-50%); color: #0A693A; background: #EBD790; border-radius: 50px; display: inline-block;  font-size: 1.4rem; font-weight: 600; width: 140px; height: 45px; }
+#container .place ul li:nth-child(2) a { padding-top: 12px; }
+#container .place ul li a:hover { color: #EBD790; background: #0A693A; }
+
+#container .place ul li.active { width: 50%; }
+#container .place ul li.active { opacity: 1; }
+
+#container .place .m_btn { display: none; }
+
+#container p { color: #EBD790; font-size: 1.6rem; font-weight: 400; }
+#container p strong { padding-left: 20px; }
+
+/* media query */
+@media (max-width:1200px) {
+    #header h1 img { width: 150px; }
+    #header .gnb > li:first-child { font-size: 3.2rem; }
+    #header .depth2 > li > a { font-size: 1.8rem; }
+
+    #container .place .p_inner { padding: 0 80px; }
+    #container .place ul li a { font-size: 1rem; width: 100px; height: 30px; }
+    #container .place ul li:nth-child(2) a { padding-top: 8px; }
+
+    #container .btn span a img { width: 25px; }
+}
+
+@media (max-width:1024px) {
+    .mgnb_wrap { width: 40%; margin-left: 60%; border-left: 1px solid #EBD790;}
+
+    #header { margin-top: 50px; }
+    #header h1 img { margin-top: -20px; position: absolute; left: 50%; transform: translateX(-50%); }
+    #header .gnb {display: block; margin-top: 60px; }
+    #header .gnb > li:first-child { font-size: 3rem;}
+    #header .gnb > li > .depth2 li {  padding: 0 10px;  }
+    #header .gnb > li > .depth2 li a { font-size: 1.2rem; }
+
+    .depth2 { width: 800px; }
+
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 100px; top: 0; cursor: pointer; }
+    #header .m_menu img { width: 40px; }
+
+    #container  .box { padding-top: 50px; }
+    #container .place ul li a { display: none; padding-top: 6px; width: 70px; cursor: pointer; }
+    #container .place ul li:nth-child(2) a { padding-top: 6px; }
+    #container .place .m_btn { font-size: 1.2rem; display: inline-block; }
+
+    #container .btn span a img { width: 30px; bottom: 60px; }
+}
+
+@media (max-width:768px) {
+    .mgnb_wrap { width: 100%; margin-left: 0; border-left: none;}
+
+    #header { margin-top: 20px; }
+    #header h1 img { display: none; }
+
+    #header .gnb {display: block; margin: 10px 0 0 0 ; }
+    #header .gnb > li:first-child { font-size: 2rem; margin-top: 20px; }
+    #header .depth2 > li > a { font-size: 1.5rem; }
+    #header .gnb > li > .depth2 li a { font-size: 1rem; }
+
+    .depth2 { width: 430px; margin-top: 20px; padding: 0 30px; text-align: center; margin-bottom: 20px; }
+
+    #header .m_logo { display: block; position: absolute; left: 50%; top: -30px; transform: translateX(-50%);  }
+    #header .m_logo img {width: 120px;}
+    #header .m_menu { z-index: 9999; display: block; position: absolute; right: 30px; top: 0; cursor: pointer;  margin-top: -10px; }
+    #header .m_menu img { width: 30px; }
+
+    #container .inner { margin-top: 220px; }
+    #container .place .p_inner { padding: 0 ; }
+
+    #container .box { padding-top: 0; }
+     
+    #container .txt { padding-top: 40px; }
+    #container .txt h2 { font-size: 1.5rem; }
+    #container .txt h3 { font-size: 1rem; }
+
+    #container .place ul { padding: 30px 0; }
+    #container .place ul li { height: 300px; }
+
+    #container .place ul li a { font-size: 1rem; width: 30px; height: 30px; display: none; border-radius: 50%; }
+    #container .place ul li:nth-child(2) a { padding-top: 0; }
+    #container .place .m_btn { font-size: 0; display: inline-block; padding-top: 0; background: url(../../images/sub/Cinematheque/next.png) center center no-repeat; width: 30px; height: 30px; cursor: pointer; transition: all 0.5s; }
+    #container .place .m_btn:hover { background: url(../../images/sub/Cinematheque/next_1.png) center center no-repeat; }
+
+    #container p { display: none; }
+
+    #container .btn { display: none;}
+    
+}

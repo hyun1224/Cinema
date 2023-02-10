@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An audio commentary</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/movie_2.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.m_1').mouseenter(function () {
+            $(this).siblings().css({
+                'opacity': '0.5'
+            });
+        });
+        $('.m_1').mouseleave(function () {
+            $(this).siblings().css({
+                'opacity': '1'
+            });
+        });
+
+         // * mdepth2 - 모바일메뉴
+         $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+       <div class="w_inner">
+        <header id="header">
+            <div class="inner clearfix">
+                <h1><a
+                        href="../../main_1.html"><img
+                            src="../../images/sub/Cinematheque/logo.png" alt="Cinémathèque"></a></h1>
+
+                <nav>
+                    <ul class="gnb">
+                        <li><a
+                                href="../Cinematheque/movie_1.html">Movie’ criticism</a><!-- 1차메뉴 -->
+                            <ul class="depth2 clearfix">
+                                <!-- 2차메뉴 -->
+                                <li><a href="../Cinematheque/movie_1.html">With Lee Jihoon's Cinephill</a></li>
+                                <li><a href="../Cinematheque/movie_2.html">An audio commentary</a></li>
+                                <li><a href="../Cinematheque/movie_3.html">Cinecritic</a></li>
+                                <li><a href="../Cinematheque/movie_4.html">A cinematic gaze</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="m_logo">
+                    <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                </div>
+
+                <div class="m_menu">
+                    <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                </div>
+            </div><!-- inner -->
+        </header><!-- header -->
+
+        <div class="mgnb_wrap">
+            <div class="m_inner">
+                <div class="mgnb_logo">
+                    <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                            alt="Cinémathèque"></a>
+                </div>
+                <div class="mgnb_back">
+                    <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                </div>
+
+                <ul class="mgnb">
+                    <li>Cinémathèque
+                        <!-- 1차메뉴 -->
+                        <ul class="mdepth2">
+                            <!-- 2차 메뉴 -->
+                            <li><a href="../Cinematheque/location.html">- Introduction</a>
+                            </li>
+                            <li><a href="../Cinematheque/date.html">- Schedule</a>
+                            </li>
+                            <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                            <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                            <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../main_2.html">Bibliothèque</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main id="container">
+            <div class="inner">
+
+                <div class="person">
+                    <div class="list">
+                        <img src="../../images/sub/Cinematheque/p_1.png" alt="황영미">
+    
+                        <div class="txt">
+                            <h2>황영미(Hwang Youngmee)</h2>
+    
+                            <dl>
+                                <dt><strong>현)</strong></dt>
+                                <dd>- 시네라처CINERATURE 소장</dd>
+                                <dd>- 영화평론가</dd>
+                            </dl>
+                            <dl>
+                                <dt><strong>저서)</strong></dt>
+                                <dd><봉준호를 읽다>, <필름 리터러시></dd>
+                                <dd><영화와 글쓰기> 등 다수</dd>
+                            </dl>
+    
+                            <a href="#">Gathering the words</a>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <img src="../../images/sub/Cinematheque/p_2.png" alt="양경미">
+    
+                        <div class="txt">
+                            <h2>양경미(Yang Kyung mi)</h2>
+    
+                            <dl>
+                                <dt><strong>현)</strong></dt>
+                                <dd>- 영화평론가</dd>
+                                <dd>- 연세대 경제대학원</dd>
+                            </dl>
+                            <dl>
+                                <dt><strong>전)</strong></dt>
+                                <dd>- 한국영화평론가협회 회장직무대행</dd>
+                                <dd>- 영상물등급위원회 등급분류심의위원</dd>
+                            </dl>
+    
+                            <a href="#">Gathering the words</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <span><a
+                            href="../../main_1.html"><img
+                                src="../../images/sub/Cinematheque/home.png" alt="home"></a></span>
+                    <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                </div>
+            </div>
+        </main><!-- containers -->
+
+        <footer id="footer"></footer><!-- footer -->
+       </div>
+
+    </div><!-- wrap -->
+
+</body>
+
+</html>

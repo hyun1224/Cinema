@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie’ criticism</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/movie_1.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.m_1').mouseenter(function () {
+            $(this).siblings().css({
+                'opacity': '0.5'
+            });
+        });
+        $('.m_1').mouseleave(function () {
+            $(this).siblings().css({
+                'opacity': '1'
+            });
+        });
+
+         // * mdepth2 - 모바일메뉴
+         $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/movie_1.html">Movie’ criticism</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/movie_1.html">With Lee Jihoon's Cinephill</a></li>
+                                    <li><a href="../Cinematheque/movie_2.html">An audio commentary</a></li>
+                                    <li><a href="../Cinematheque/movie_3.html">Cinecritic</a></li>
+                                    <li><a href="../Cinematheque/movie_4.html">A cinematic gaze</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="box">
+                        <div class="lee">
+                            <img src="../../images/sub/Cinematheque/1.png" alt="이지훈">
+    
+                            <div class="txt">
+                                <h2>이지훈의 시네필로</h2>
+                                <p>매월 개봉작들을 독특하고 풍성한 인문학적 시각으로 이야기 나누는 프로그램입니다.<br>
+                                    철학적 관점에서 바라본 영화에 대한 수많은 담론을 제시하며 재밌고 유익하게 영화를<br>
+                                    보는 새로운 시선을 가져보세요.</p>
+                                <a href="#">Program Shortcuts</a>
+                            </div>
+                        </div><!-- lee -->
+    
+                        <div class="list">
+                            <div class="m_1">
+                                <img src="../../images/sub/Cinematheque/2.png" alt="사랑할 땐 누구나 최악이 된다">
+    
+                                <p>
+                                    <사랑할 땐 누구나 <br> 
+                                    최악이 된다><br>
+                                        : ‘자기만의 방’
+                                </p>
+                                <p>2022 - 09 - 21</p>
+                            </div>
+                            <div class="m_1">
+                                <img src="../../images/sub/Cinematheque/3.png" alt="우연과 상상">
+    
+                                <p>
+                                    <우연과 상상><br>
+                                        - ‘구키 슈조’ 주제에 의한<br>‘데리다’적 변주
+                                </p>
+                                <p>2022 - 06 - 30</p>
+                            </div>
+                            <div class="m_1">
+                                <img src="../../images/sub/Cinematheque/4.png" alt="벨파스트">
+    
+                                <p>
+                                    <벨파스트><br>
+                                        - 일상이라는 기적
+                                </p>
+                                <p>2022 - 04 - 20</p>
+                            </div>
+                            <div class="m_1">
+                                <img src="../../images/sub/Cinematheque/5.png" alt="피그">
+    
+                                <p>
+                                    <피그><br>
+                                        - 요리의 인류학
+                                </p>
+                                <p>2022 - 02 - 24</p>
+                            </div>
+                        </div>
+    
+    
+                        <div class="btn">
+                            <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                        alt="home"></a></span>
+                            <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                        </div>
+                    </div>
+                </div>
+            </main><!-- containers -->
+
+            <footer id="footer"></footer><!-- footer -->
+
+        </div>
+    </div><!-- wrap -->
+
+</body>
+
+</html>

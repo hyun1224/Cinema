@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinecritic</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/movie_3.css"><!-- 순서주의!(내가 작성한 css 마지막에) -->
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.person').mouseenter(function () {
+            $(this).siblings().css({
+                'opacity': '0.5'
+            });
+            $('.title').css({
+                'opacity': '1'
+            });
+        });
+        $('.person').mouseleave(function () {
+            $(this).siblings().css({
+                'opacity': '1'
+            });
+        });
+
+        // * mdepth2 - 모바일메뉴
+        $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+        
+    });
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/movie_1.html">Movie’ criticism</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/movie_1.html">With Lee Jihoon's Cinephill</a></li>
+                                    <li><a href="../Cinematheque/movie_2.html">An audio commentary</a></li>
+                                    <li><a href="../Cinematheque/movie_3.html">Cinecritic</a></li>
+                                    <li><a href="../Cinematheque/movie_4.html">A cinematic gaze</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="box">
+                        <div class="title">
+                            <h2>Cinecritic</h2>
+                            <p>영화에 대한 전문적 식견과 통찰력, 다양한 관점이 돋보이는 '영화평론가'의 차별화된 평론을 만나는 공간입니다.</p>
+
+                            <p>감독과 영화에 대한 전문적인 지식을 바탕으로 한 논리적인 평론글로 여러분을 새로운 영화 세상으로 안내합니다.</p>
+
+                            <p>매월 개봉하는 대중영화와 한국독립영화를 바탕으로 평론글이 게시되며, 이를 통해 새로운 영화 세상으로 떠나보세요!</p>
+
+                            <a href="#">more view</a>
+                        </div>
+
+                        <div class="person">
+                            <img src="../../images/sub/Cinematheque/p_3.png" alt="강선형">
+
+                            <div class="txt">
+                                <h2>강선형 <span>한국영화평론가협회</span></h2>
+                                <p>한국예술종합학교 영상원 영화과를 졸업하고, 서강대학교 철학과에서
+                                    <strong>『들뢰즈 철학에서 시간의 종합과 영화』</strong>로<br>
+                                    석사학위를, <strong>『들뢰즈와 칸트: 들뢰즈 철학의 형성에서
+                                        칸트 삼비판서의 역할』</strong>로 박사학위를 받았다.<br>
+                                    현재 서강대, 국민대, 성신여자대학교에서 강의, 서강대학교 철학연구소 연구원, 한국프랑스철학회 총무이사,<br>
+                                    한국영화평론가협회 편집간사로 활동하고 있다.
+                                </p>
+                                <a href="#">Gathering the words</a>
+                            </div>
+                        </div>
+
+                        <div class="person">
+                            <img src="../../images/sub/Cinematheque/p_4.png" alt="송영애">
+
+                            <div class="txt">
+                                <h2>송영애 <span>한국영화평론가협회</span></h2>
+                                <p>한국영화 역사, 문화, 교육 관련 연구를 지속하며, <strong>《세계일보》,《르몽드 디플로마티크》</strong>에<br>
+                                    영화 관련 글도 기고 중이다. 공저로 <strong>『은막의 사회문화사: 1950~70년대 극장의 지형도』(2017), <br>
+                                        『한국영화감독』(2020),
+                                        『욕망의 모모한 대상: 영화 속 욕망 이야기』(2021),<br>『영화와 배우』(2021)</strong> 등이 있다.</p>
+                                <a href="#">Gathering the words</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                    </div>
+                </div>
+            </main><!-- containers -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+
+    </div><!-- wrap -->
+
+</body>
+
+</html>

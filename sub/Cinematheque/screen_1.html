@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current screening</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/screen_1.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.modal').hide();
+
+        $('.rev>.r_1').click(function () {
+            $('.modal').stop().fadeIn();
+        });
+        $('.close').click(function () {
+            $('.modal').stop().fadeOut();
+        });
+
+        // * mdepth2 - 모바일메뉴
+        $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+    });
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/screen_1.html">Screening
+                                    program</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/screen_1.html">Current
+                                            screening </a></li>
+                                    <li><a href="../Cinematheque/screen_2.html">Scheduled to be screened</a></li>
+                                    <li><a href="../Cinematheque/screen_3.html">Last screening</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- <div class="m_back">
+                        <a href="../Cinematheque/location.html"><img src="../../images/sub/Cinematheque/mback.png"
+                                alt="모바일 뒤로가기"></a>
+                    </div>
+ -->
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <a href="../../sub/Cinematheque/screen_1.html"><img
+                                src="../../images/sub/Cinematheque/search.png" alt="검색"></a>
+                    </div>
+
+                    <div class="box">
+                        <div class="movie">
+                            <h1><a href="#"><img src="../../images/sub/Cinematheque/m_1.png" alt="2022 BIFF"></a></h1>
+
+                            <dl class="txt">
+                                <h2>2022 BIFF</h2>
+                                <dt>2022-09-21 ~ 2022-10-14</dt>
+                                <dd>● 9/21(수) ~ 10/4(화) : BIFF 준비기간</dd>
+                                <dd>● 10/5(수) ~ 14(금) : BIFF 개최</dd>
+                            </dl>
+
+                            <ul class="rev">
+                                <li class="r_1"><a href="#">Program<br>Information</a></li>
+                                <li><a href="#">Screening work</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="movie">
+                            <h1><a href="#"><img src="../../images/sub/Cinematheque/m_2.png"
+                                        alt="Korean Independent Film Program in September"></a></h1>
+
+                            <dl class="txt">
+                                <h2>Korean Independent Film<br>Program in September</h2>
+                                <dt>2022-09-01 ~ 2022-09-30</dt>
+                                <dd>[9월 한국독립영화 개봉 프로그램]</dd>
+                                <dd>● 09월 08일: 성적표의 김민영</dd>
+                            </dl>
+
+                            <ul class="rev">
+                                <li class="r_1"><a href="#">Program<br>Information</a></li>
+                                <li><a href="#">Screening work</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="movie">
+                            <h1><a href="#"><img src="../../images/sub/Cinematheque/m_3.png"
+                                        alt="2022 Media Artwork Screening"></a></h1>
+
+                            <dl class="txt">
+                                <h2>2022 Media Artwork</h2>
+                                <dt>2022-05-23 ~ 2022-12-31</dt>
+                                <dd>● 같이보고, 같이 즐기는 관람문화!!</dd>
+                                <dd>● 가치봄을 통한 가치있는 경험!!</dd>
+                            </dl>
+
+                            <ul class="rev">
+                                <li class="r_1"><a href="#">Program<br>Information</a></li>
+                                <li><a href="#">Screening work</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="btn">
+                        <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                    </div>
+                </div>
+            </main><!-- containers -->
+
+            <footer id="footer"></footer><!-- footer -->
+
+            <div class="modal">
+                <!-- 모달 팝업창 -->
+                <div class="box">
+                    <div class="inner">
+
+                        <div class="m_img">
+                            <img src="../../images/sub/Cinematheque/m.png" alt="2022 BIFF">
+                        </div>
+    
+                        <div class="m_txt">
+                            <ul class="m_info">
+                                <li>
+                                    <span class="tap">Key information</span>
+                                    <h1>2022 BIFF</h1>
+    
+                                    <ul class="txt">
+                                        <li><strong>Date :</strong> <span>2022-09-21(수) ~ 2022-10-14(금)</span></li>
+                                        <li><strong>Information :</strong> <span>* 9/21(수) ~ 10/4(화) : BIFF 준비기간</span></li>
+                                        <li>* 10/5(수) ~ 14(금) : BIFF 개최</li>
+                                    </ul>
+    
+                                    <dl>
+                                        <h2>제27회 부산국제영화제 준비지원으로 운영일정을 아래와 같이 안내 드립니다.</h2>
+                                        <dd>- 9/21(수) ~ 10/4(화) : BIFF 준비기간(BIFF 준비기간동안 영화 상영 없음)</dd>
+                                        <dd>- 10/5(수) ~ 14(금) : BIFF 개최</dd>
+                                        <dd>- 10/15(토) : 휴관(상영준비)</dd>
+                                        <dd>- 10/16(일) : 정상운영</dd>
+                                    </dl>
+    
+                                    <p>영화제 기간동안 상영정보 및 영화예매는 부산국제영화제 홈페이지에서(www.biff.kr) 이용가능합니다.<br>
+                                        제27회 부산국제영화제 성공적인 개최를 위하여 운영지원에 최선을 다하겠습니다.<br>
+                                        영화의전당에서 상영되던 대중 · 예술 · 독립 · 시네마테크 기획전들은 10.16(일)부터 영화의전당 상영관에서 다시 만나실 수 있습니다.</p>
+                                </li>
+    
+                                <li>
+                                    <span class="tap">Screening work</span>
+                                    <!-- <table class="m_2">
+                                        <tr>
+                                            <th>영화 제목</th>
+                                            <th></th>
+                                            <th>작품 정보</th>
+                                        </tr>
+                                        <tr>
+                                            <td>제 27회 부산국제영화제</td>
+                                            <td>min | ALL</td>
+                                            <td>상세보기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제 27회 부산국제영화제</td>
+                                            <td>min | ALL</td>
+                                            <td>상세보기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제 27회 부산국제영화제</td>
+                                            <td>min | ALL</td>
+                                            <td>상세보기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BIFF 준비</td>
+                                            <td>min | ALL</td>
+                                            <td>예매 준비중</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BIFF 준비</td>
+                                            <td>min | ALL</td>
+                                            <td>예매 준비중</td>
+                                        </tr>
+                                    </table> -->
+                                </li>
+    
+                                <li>
+                                    <span class="tap">Screening schedule</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="close">
+                            <img src="../../images/sub/Cinematheque/close.png" alt="닫기 버튼">
+                        </div>
+                    </div>
+                </div>
+            </div><!-- modal -->
+        </div>
+
+    </div><!-- wrap -->
+
+</body>
+
+</html>

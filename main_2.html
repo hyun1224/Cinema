@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/ani.css">
+    <link rel="stylesheet" href="css/main_2.css">
+
+    <!-- js -->
+    <script src="js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.depth2').hide();
+            $('.bg').hide();
+            // $('.quick').hide();
+
+            $('.gnb>li').mouseenter(function () {
+                $(this).children('.depth2').stop().fadeIn(); // fadeIn : 서서히 나타난다
+                /* $('.bg').stop().fadeIn(); */
+            });
+            $('.gnb>li').mouseleave(function () {
+                $(this).children('.depth2').stop().fadeOut(); // fadeOut : 서서히 사라진다
+                /* $('.bg').fadeOut(); */
+            });
+
+            $('.plus_btn').click(function () {
+                $('.quick').toggleClass('active');
+            });
+
+            // * mdepth2 - 모바일메뉴
+            $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner">
+                    <h1 class="logo_over"><a href="index.html"><img src="images/main/logo_1.png"
+                                alt="cinema"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="main_1.html">Cinémathèque</a>
+                            </li>
+                            <li><a href="main_2.html">Bibliothèque</a>
+                                <!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="sub/Bibliotheque/info.html">Information</a></li>
+                                    <li><a href="sub/Bibliotheque/search_1.html">Search</a></li>
+                                    <li><a href="sub/Bibliotheque/notice.html">Open space</a></li>
+                                    <li><a href="sub/Bibliotheque/film.html">Film Archive</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><img class="login" src="images/main/login_1.png" alt="로그인"></a></li>
+                            <li><a href="#"><img class="menu" src="images/main/menu_2.png" alt="메뉴"></a></li>
+                        </ul>
+                    </nav>
+                </div><!-- inner -->
+
+                <div class="m_login">
+                    <a href="#"><img src="images/sub/Bibliotheque/mlogin.png" alt="모바일 로그인"></a>
+                </div>
+
+                <div class="depth2_bg"></div>
+
+                <div class="mgnb_wrap">
+                    <div class="m_inner">
+                        <div class="mgnb_logo">
+                            <a href="main_2.html"><img src="images/sub/Bibliotheque/logo_1.png"
+                                    alt="Cinémathèque"></a>
+                        </div>
+                        <div class="mgnb_back">
+                            <img src="images/sub/Bibliotheque/back.png" alt="뒤로가기">
+                        </div>
+
+                        <ul class="mgnb">
+                            <li><a href="../html/main_1.html">Cinémathèque</a></li>
+                            <li>Bibliothèque<!-- 1차메뉴 -->
+                                <ul class="mdepth2">
+                                    <!-- 2차 메뉴 -->
+                                    <li><a href="sub/Bibliotheque/info.html">- Information</a></li>
+                                    <li><a href="sub/Bibliotheque/search_1.html">- Search</a></li>
+                                    <li><a href="sub/Bibliotheque/notice.html">- Open space</a></li>
+                                    <li><a href="sub/Bibliotheque/film.html">- Film Archive</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mgnb_wrap_bg"></div>
+
+            </header><!-- header -->
+
+            <div class="bg"></div>
+
+            <main id="container">
+                <div class="inner">
+                    <div class="wave clearfix">
+                        <span style="--i:1;"><img src="images/main/7.png"></span>
+                        <span style="--i:2;"><img src="images/main/8.png"></span>
+                        <span style="--i:3;"><img src="images/main/9.png"></span>
+                        <span style="--i:4;"><img src="images/main/10.png"></span>
+                        <span style="--i:5;"><img src="images/main/11.png"></span>
+                        <span style="--i:6;"><img src="images/main/12.png"></span>
+                    </div>
+
+                    <div class="plus_btn">
+                        <p><a href="#"><img class="plus_over" src="images/main/plus_1.png" alt="더보기"></a></p>
+
+                        <div class="quick">
+                            <ul>
+                                <li><a href="sub/Cinematheque/date.html">Schedule</a></li>
+                                <li><a href="sub/Bibliotheque/notice.html">Notice</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+    </div><!-- wrap -->
+</body>
+
+</html>

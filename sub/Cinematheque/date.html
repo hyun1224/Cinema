@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/Cinematheque/common.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/ani.css">
+    <link rel="stylesheet" href="../../css/Cinematheque/date.css">
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('.modal').hide();
+            $('.book_mark>.mark_1').hide();
+
+            $('.date td').click(function () {
+                $('.modal').stop().fadeIn();
+                $(this).find('a').addClass('active'); //선택날짜 고정
+            });
+
+            $('.book_mark>.mark').click(function () {
+                $('.book_mark>.mark_1').stop().show();
+            });
+            $('.book_mark>.mark_1').click(function () {
+                $('.book_mark>.mark_1').hide();
+                $('.book_mark>.mark').stop().show();
+            });
+
+            $('.re').click(function () {
+                $('.modal').stop().fadeOut();
+                $('.date td').find('a').removeClass('active');
+            });
+
+             // * mdepth2 - 모바일메뉴
+             $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a
+                            href="../../main_1.html"><img
+                                src="../../images/sub/Cinematheque/logo.png" alt="Cinémathèque"></a></h1>
+    
+                    <nav>
+                        <ul class="gnb">
+                            <li><a
+                                    href="../Cinematheque/date.html">Schedule</a>
+                                <!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/date.html">Screening Calendar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+    
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+                </div><!-- inner -->
+
+                <div class="depth2_bg"></div>
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <main id="container">
+                <div class="inner cl">
+                    <div class="calendar">
+                        <h1>2022</h1>
+                        <h2>october</h2>
+    
+                        <table>
+                            <tr class="day">
+                                <td>Sunday</td>
+                                <td>Monday</td>
+                                <td>Tuesday</td>
+                                <td>Wednesday</td>
+                                <td>Thursday</td>
+                                <td>Friday</td>
+                                <td>Saturday</td>
+                            </tr>
+                            <tr class="date">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="holiday"><a href="#">1</a></td>
+                            </tr>
+                            <tr class="date">
+                                <td class="holiday"><a href="#">2</a></td>
+                                <td><a href="#">3</a></td>
+                                <td><a href="#">4</a></td>
+                                <td><a href="#">5</a></td>
+                                <td><a href="#">6</a></td>
+                                <td><a href="#">7</a></td>
+                                <td class="holiday"><a href="#">8</a></td>
+                            </tr>
+                            <tr class="date">
+                                <td class="holiday"><a href="#">9</a></td>
+                                <td><a href="#">10</a></td>
+                                <td><a href="#">11</a></td>
+                                <td><a href="#">12</a></td>
+                                <td><a href="#">13</a></td>
+                                <td><a href="#">14</a></td>
+                                <td class="holiday"><a href="#">15</a></td>
+                            </tr>
+                            <tr class="date">
+                                <td class="holiday"><a href="#">16</a></td>
+                                <td><a href="#">17</a></td>
+                                <td><a href="#">18</a></td>
+                                <td><a href="#">19</a></td>
+                                <td><a href="#">20</a></td>
+                                <td><a href="#">21</a></td>
+                                <td class="holiday"><a href="#">22</a></td>
+                            </tr>
+                            <tr class="date">
+                                <td class="holiday"><a href="#">23</a></td>
+                                <td><a href="#">24</a></td>
+                                <td><a href="#">25</a></td>
+                                <td><a href="#">26</a></td>
+                                <td><a href="#">27</a></td>
+                                <td><a href="#">28</a></td>
+                                <td class="holiday"><a href="#">29</a></td>
+                            </tr>
+                            <tr class="date">
+                                <td class="holiday"><a href="#">30</a></td>
+                                <td><a href="#">31</a></td>
+                                <td><a href="#">1</a></td>
+                                <td><a href="#">2</a></td>
+                                <td><a href="#">3</a></td>
+                                <td><a href="#">4</a></td>
+                                <td class="holiday"><a href="#">5</a></td>
+                            </tr>
+                        </table>
+                    </div><!-- date -->
+    
+                    <div class="btn">
+                        <span><a
+                                href="../../main_1.html"><img
+                                    src="../../images/sub/Cinematheque/home.png" alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+    
+            <footer id="footer"></footer><!-- footer -->
+    
+            <div class="modal">
+                <div class="box">
+                    <div class="img clearfix">
+                        <img class="movie" src="../../images/sub/Cinematheque/movie.jpg" alt="사랑할 땐 누구나 최악이 된다">
+        
+                        <div class="book_mark">
+                            <img class="mark" src="../../images/sub/Cinematheque/mark.png" alt="북마크">
+                            <img class="mark_1" src="../../images/sub/Cinematheque/mark_1.png" alt="북마크 표시">
+                        </div>
+        
+                        <ul class="num">
+                            <form><input type=button value="-" onClick="javascript:this.form.amount.value--;"><input type=text
+                                    name=amount value=0><input type=button value="+"
+                                    onClick="javascript:this.form.amount.value++;"></form>
+                            <li class="re"><a href="#">Reservation</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="txt">
+                        <h1>영화 제목 : 사랑할 땐 누구나 최악이 된다</h1>
+        
+                        <ul>
+                            <li><strong>Screening date</strong> 2022-08-25 (Thu) ~ 2022-09-19 (Mon)</li>
+                            <li><strong>Screening</strong> Cinema Tech</li>
+                            <li><strong>Work information</strong> 128min | D-Cinema | color | Norway | 2021 |</li>
+                            <li><strong>Director</strong> Joachim Trier</li>
+                            <li><strong>Actor</strong> Renate Rainsbe, Anders Danielson Lee, Halbert Nordrum</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_bg"></div>
+            </div><!-- modal -->
+        </div>
+    </div><!-- wrap -->
+
+</body>
+
+</html>

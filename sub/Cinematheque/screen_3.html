@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled to be screened</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/screen_3.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // * mdepth2 - 모바일메뉴
+        $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+    });
+</script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/screen_1.html">Screening
+                                    program</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/screen_1.html">Current
+                                            screening </a></li>
+                                    <li><a href="../Cinematheque/screen_2.html">Scheduled to be screened</a></li>
+                                    <li><a href="../Cinematheque/screen_3.html">Last screening</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="m_back">
+                        <a href="../Cinematheque/screen_2.html"><img src="../../images/sub/Cinematheque/mback.png"
+                                alt="모바일 뒤로가기"></a>
+                    </div>
+
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <a href="../../sub/Cinematheque/screen_3.html"><img
+                                src="../../images/sub/Cinematheque/search.png" alt="검색"></a>
+                    </div>
+
+                    <table class="notice">
+                        <tr>
+                            <th>번호</th>
+                            <th>프로그램</th>
+                            <th>상영기간</th>
+                            <th>정보</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>제11회 스웨덴영화제</td>
+                            <td>2022-09-14(수) ~ 2022-09-20(화)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>서울독립영화제 순회상영회 인디피크닉 2022</td>
+                            <td>2022-09-12(월) ~ 2022-09-18(일)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>[시네마테크] 셰익스피어 인 무비</td>
+                            <td>2022-09-06(화) ~ 2022-09-18(일)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>명작공연, 스크린을만나다</td>
+                            <td>2022-09-05(월) ~ 2022-09-20(화)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>제6회 부산인터시티영화제</td>
+                            <td>2022-09-02(금) ~ 2022-09-04(일)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>김새벽 배우전</td>
+                            <td>2022-09-01(목) ~ 2022-09-07(수)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>9월 영화사랑방ㅣ한국 고전영화 정기상영회</td>
+                            <td>2022-09-01(목) ~ 2022-09-12(월)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>故 배우 강수연 추모상영회</td>
+                            <td>2022-08-19(금) ~ 2022-08-21(일)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>[시네마테크] 한중 수교 30주년 특별전: 중국 예술 영화의 빛을 찾아서</td>
+                            <td>2022-08-19(금) ~ 2022-09-01(목)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>제1회 하나뿐인 지구영상제</td>
+                            <td>2022-08-11(목) ~ 2022-08-15(월)</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                    </table>
+
+                    <div class="btn">
+                        <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                    </div>
+                </div>
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+
+    </div><!-- wrap -->
+
+</body>
+
+</html>

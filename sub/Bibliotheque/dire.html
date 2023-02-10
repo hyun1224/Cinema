@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directions</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/Bibliotheque/common.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/ani.css">
+    <link rel="stylesheet" href="../../css/Bibliotheque/dire.css">
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // * mdepth2 - 모바일메뉴
+            $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/logo.png"
+                                alt="Bibliothèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../../sub/Bibliotheque/info.html">Introduction</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../../sub/Bibliotheque/info.html">Information</a></li>
+                                    <li><a href="../../sub/Bibliotheque/dire.html">Directions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Bibliotheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Bibliotheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub//Bibliotheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Bibliotheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li><a href="../../main_1.html">Cinémathèque</a></li>
+                        <li>Bibliothèque</a>
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Bibliotheque/info.html">- Information</a>
+                                </li>
+                                <li><a href="../Bibliotheque/search_1.html">- Search</a>
+                                </li>
+                                <li><a href="../Bibliotheque/notice.html">- Open space</a></li>
+                                <li><a href="../Bibliotheque/film.html">- Film Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="info">
+                        <div class="txt">
+                            <dl>
+                                <dt>● 위치</dt>
+                                <dd><strong>영화의 전당 더블콘</strong></dd>
+                            </dl>
+                            <dl>
+                                <dt>● 층별안내</dt>
+                                <dd>- 1F BIFF Space 열린전시공간</dd>
+                                <dd><strong>- 4F The Libray 영화의 전당 라이브러리</strong></dd>
+                            </dl>
+                            <dl>
+                                <dt>● 대중교통</dt>
+                                <dd>지하철 2호선 센텀시티역 6번/12번 출구</dd>
+                            </dl>
+                        </div>
+
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.42690586586!2d129.12272543488766!3d35.170910899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568932815fc9d17%3A0x7e9bb5be4e50f793!2z7JiB7ZmU7J2Y7KCE64u5IOudvOydtOu4jOufrOumrCDsnpDro4zsi6Q!5e0!3m2!1sko!2skr!4v1666665332692!5m2!1sko!2skr"
+                                width="830" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <span><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Bibliotheque/login.png" alt="login"></a></span>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+    </div>
+</body>
+
+</html>

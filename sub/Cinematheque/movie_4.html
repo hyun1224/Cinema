@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A cinematic gaze</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Cinematheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Cinematheque/movie_4.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // * mdepth2 - 모바일메뉴
+        $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/movie_1.html">Movie’
+                                    criticism</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/movie_1.html">With Lee Jihoon's Cinephill</a></li>
+                                    <li><a href="../Cinematheque/movie_2.html">An audio commentary</a></li>
+                                    <li><a href="../Cinematheque/movie_3.html">Cinecritic</a></li>
+                                    <li><a href="../Cinematheque/movie_4.html">A cinematic gaze</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="box">
+                        <div class="title">
+                            <h2>A cinematic gaze</h2>
+                            <p>영화로운 시선은 영화의전당과 부산국제영화제의 협업으로 탄생한 '시민평론단'에게 영화에 관한 자유로운 비평글을 기고할 수 있도록 마련된 공간입니다.</p>
+
+                                <p>부산 시민들이 영화 비평에 능동적으로 참여할 수 있는 계기를 마련하여 활발한 문화적 담론을 형성하고자 합니다.</p>
+
+                                <p>매월 개봉하는 대중영화와 한국독립영화를 바탕으로 게시되며,
+                                영화를 보는 관객들에게 다채로운 관점을 제시하고자 합니다.</p>
+
+                                <a href="#">more view</a>
+                        </div>
+
+                        <div class="list">
+                            <div class="movie">
+                                <img src="../../images/sub/Cinematheque/6.png" alt="둠둠">
+
+                                <p><strong>불안의 소리들을 넘어서<br>
+                                        <둠둠>
+                                    </strong></p>
+                                <p>2022 - 09 - 22</p>
+                            </div>
+                            <div class="movie">
+                                <img src="../../images/sub/Cinematheque/7.png" alt="성적표의 김민영">
+
+                                <p><strong>
+                                        <성적표의 김민영><br>
+                                            : 삼행시를 닮은 영화
+                                    </strong></p>
+                                <p>2022 - 09 - 19</p>
+                            </div>
+                            <div class="movie">
+                                <img src="../../images/sub/Cinematheque/8.png" alt="작은새와 돼지씨">
+
+                                <p><strong>사랑, 인생, 예술의 삼위일체<br>
+                                        - <작은새와 돼지씨></strong></p>
+                                <p>2022 - 09 - 02</p>
+                            </div>
+                            <div class="movie">
+                                <img src="../../images/sub/Cinematheque/9.png" alt="침묵의 언어">
+
+                                <p><strong>오렌지필름 <침묵의 언어><br>
+                                            - 소수의 언어</strong></p>
+                                <p>2022 - 08 - 29</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="btn">
+                        <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                    </div>
+                </div>
+            </main><!-- containers -->
+
+            <footer id="footer"></footer><!-- footer -->
+
+        </div>
+    </div><!-- wrap -->
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinéma</title>
+
+    <!-- open graph -->
+    <meta property="og:title" content="Cinéma"><!-- 사이트 이름 -->
+    <meta property="og:url" content="https://hyun1224.github.io/Cinema/"><!-- 도메인 주소 -->
+    <meta property="og:description" content="필름 및 영상관련 도서자료들을 수집, 보관하는 곳 시네마"><!-- 사이트 설명 *수정하기* -->
+    <meta property="og:image" content="images/og.png"><!-- 적용할 이미지 *비율 2:1 -->
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/ani.css">
+    <link rel="stylesheet" href="css/intro.css">
+
+    <!-- js -->
+    <script src="js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // mgnb
+            $('.menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner">
+                    <h1 class="logo_over"><a href="index.html"><img src="images/main/logo.png" alt="cinema"></a>
+                    </h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li class="g_1"><a style="transition: background 2s;"
+                                    href="main_1.html">Cinémathèque</a>
+                            </li>
+                            <li class="g_1"><a href="main_2.html">Bibliothèque</a>
+                            </li>
+                            <li><a href="#"><img class="login" src="images/main/login.png" alt="로그인"></a></li>
+                            <li><a href="#"><img class="menu" src="images/main/menu_1.png" alt="메뉴"></a></li>
+                        </ul>
+                    </nav>
+                </div><!-- inner -->
+
+                <div class="m_login">
+                    <a href="#"><img src="images/sub/Cinematheque/mlogin.png" alt="모바일 로그인"></a>
+                </div>
+
+                <div class="depth2_bg"></div>
+
+                <div class="mgnb_wrap">
+                    <div class="m_inner">
+                        <div class="mgnb_back">
+                            <img src="images/sub/Cinematheque/back.png" alt="뒤로가기">
+                        </div>
+
+                        <ul class="mgnb">
+                            <li><a href="main_1.html">Cinémathèque</a></li>
+                            <li><a href="main_2.html">Bibliothèque</li>
+                        </ul>
+                    </div>
+                </div>
+            </header><!-- header -->
+
+            <main id="container">
+                <div class="inner clearfix">
+                    <div class="wave">
+                        <span style="--i:1;"><img src="images/main/1.png"></span>
+                        <span style="--i:2;"><img src="images/main/2.png"></span>
+                        <span style="--i:3;"><img src="images/main/3.png"></span>
+                        <span style="--i:4;"><img src="images/main/4.png"></span>
+                        <span style="--i:5;"><img src="images/main/5.png"></span>
+                        <span style="--i:6;"><img src="images/main/6.png"></span>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+    </div><!-- wrap -->
+</body>
+
+</html>

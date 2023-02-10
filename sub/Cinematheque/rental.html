@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/Cinematheque/common.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/ani.css">
+    <link rel="stylesheet" href="../../css/Cinematheque/rental.css">
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".place ul li:nth-of-type(1)").addClass("active");
+            $(".place ul li").mouseenter(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+
+            // * mdepth2 - 모바일메뉴
+            $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo.png"
+                                alt="Cinémathèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Cinematheque/rental.html">Rental
+                                    Information</a>
+                                <!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Cinematheque/rental.html">Application</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Cinematheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Cinematheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Cinematheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li>Cinémathèque
+                            <!-- 1차메뉴 -->
+                            <ul class="mdepth2">
+                                <!-- 2차 메뉴 -->
+                                <li><a href="../Cinematheque/location.html">- Introduction</a>
+                                </li>
+                                <li><a href="../Cinematheque/date.html">- Schedule</a>
+                                </li>
+                                <li><a href="../Cinematheque/screen_1.html">- Screening program</a></li>
+                                <li><a href="../Cinematheque/movie_1.html">- Movie’ criticism</a></li>
+                                <li><a href="../Cinematheque/rental.html">- Rental Information</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../main_2.html">Bibliothèque</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="box">
+                        <div class="txt">
+                            <h2>영화관 대관 신청서 & 기타 사용계획서 외</h2>
+                            <h3>영화의전당 자체상영이 없는 시간에만 가능합니다(영화제 등 일부행사 제외) 아래 신청서를 다운받아 작성 후 제출바랍니다</h3>
+                        </div>
+
+                        <div class="place">
+                            <div class="p_inner">
+                                <ul>
+                                    <li><a href="#">Rental<br>regulations</a>
+                                        <a class="m_btn">more</a>
+                                    </li>
+                                    <li><a href="#">Rental fee</a>
+                                        <a class="m_btn">more</a>
+                                    </li>
+                                    </li>
+                                    <li><a href="#">The bylaws<br>of the crown</a>
+                                        <a class="m_btn">more</a>
+                                    </li>
+                                    </li>
+                                    <li><a href="#">An application<br>for use</a>
+                                        <a class="m_btn">more</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p><strong>제출 방법</strong> : 이메일(dc3143@dureraum.org),우편,팩스,방문접수 <strong>문의</strong> :
+                            051-780-6088
+                        </p>
+
+                        <div class="btn">
+                            <span><a href="../../main_1.html"><img src="../../images/sub/Cinematheque/home.png"
+                                        alt="home"></a></span>
+                            <span><a href="#"><img src="../../images/sub/Cinematheque/login.png" alt="login"></a></span>
+                        </div>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+
+    </div><!-- wrap -->
+</body>
+
+</html>

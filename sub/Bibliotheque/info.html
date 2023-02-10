@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/Bibliotheque/common.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/ani.css">
+    <link rel="stylesheet" href="../../css/Bibliotheque/info.css">
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".info ul li:nth-child(1)").addClass("active");
+            $(".info ul li").mouseenter(function () {
+                $(this).addClass("active").siblings().stop().removeClass("active");
+            });
+
+            // * mdepth2 - 모바일메뉴
+            $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/logo.png"
+                                alt="Bibliothèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../../sub/Bibliotheque/info.html">Introduction</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../../sub/Bibliotheque/info.html">Information</a></li>
+                                    <li><a href="../../sub/Bibliotheque/dire.html">Directions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Bibliotheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Bibliotheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub//Bibliotheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Bibliotheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li><a href="../../main_1.html">Cinémathèque</a></li>
+                        <li>Bibliothèque</a>
+                        <!-- 1차메뉴 -->
+                        <ul class="mdepth2">
+                            <!-- 2차 메뉴 -->
+                            <li><a href="../Bibliotheque/info.html">- Information</a>
+                            </li>
+                            <li><a href="../Bibliotheque/search_1.html">- Search</a>
+                            </li>
+                            <li><a href="../Bibliotheque/notice.html">- Open space</a></li>
+                            <li><a href="../Bibliotheque/film.html">- Film Archive</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="info">
+                        <div class="i_inner">
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt><a href="#">Target of use</a></dt>
+                                        <dd class="more"><a href="#">more</a></dd>
+                                        <dd>누구나 (단 만 15세 미만은 보호자 동반)</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><a href="#">Hours of use</a></dt>
+                                        <dd class="more"><a href="#">more</a></dd>
+                                        <dd>평일 : 오전 9시 30분 ~ 오후 8시<br>
+                                            주말, 공휴일 : 오전 9시 ~ 오후 6시</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><a href="#">Closed day</a></dt>
+                                        <dd class="more"><a href="#">more</a></dd>
+                                        <dd>매주 월요일, 1월 1일, 설 연휴, 추석 연휴<br>
+                                            그 외, 영화의전당 대표가 필요하다고 인정하는 날</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><a href="#">Fee: Free</a></dt>
+                                        <dd class="more"><a href="#">more</a></dd>
+                                        <dd>문헌자료 복사는 유료 (1장당 50원), 복사는 저작권법과 관련해 자료의 1/5까지 가능합니다.<br>
+                                            영화의전당 라이브러리의 모든 자료는 외부 대출하지 않습니다. (개인 소장 영상 열람불가)</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><a href="#">How to use it</a></dt>
+                                        <dd class="more"><a href="#">more</a></dd>
+                                        <dd>개인소지품 사물함 보관 ▶ 신분증 제출 ▶ 안내에 따라 자료실 이용</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <span><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Bibliotheque/login.png" alt="login"></a></span>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Search</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/Bibliotheque/common.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/ani.css">
+    <link rel="stylesheet" href="../../css/Bibliotheque/search_1.css">
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.d_btn').click(function () {
+                $('.contents > input').removeClass();
+            });
+
+            // * mdepth2 - 모바일메뉴
+            $('.mdepth2').hide();
+            $('.mgnb > li').click(function () {
+                $(this).children('.mdepth2').stop().slideToggle();
+                $(this).siblings().children('.mdepth2').stop().slideUp();
+            });
+
+            // mgnb
+            $('.m_menu').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '0' /* 값은 따옴표 넣기 '' */
+                }, 1000); // 1초동안
+            });
+            $('.mgnb_back').click(function () {
+                $('.mgnb_wrap').animate({
+                    left: '100%'
+                }, 1000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/logo.png"
+                                alt="Bibliothèque"></a></h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../../sub/Bibliotheque/search.html">Search</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../../sub/Bibliotheque/search_1.html">Data Search</a></li>
+                                    <li><a href="../../sub/Bibliotheque/search_2.html">Recommended</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Bibliotheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Bibliotheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub//Bibliotheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Bibliotheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li><a href="../../main_1.html">Cinémathèque</a></li>
+                        <li>Bibliothèque</a>
+                        <!-- 1차메뉴 -->
+                        <ul class="mdepth2">
+                            <!-- 2차 메뉴 -->
+                            <li><a href="../Bibliotheque/info.html">- Information</a>
+                            </li>
+                            <li><a href="../Bibliotheque/search_1.html">- Search</a>
+                            </li>
+                            <li><a href="../Bibliotheque/notice.html">- Open space</a></li>
+                            <li><a href="../Bibliotheque/film.html">- Film Archive</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="data">
+                        <div class="d_inner clearfix">
+
+                            <div class="contents">
+                                <div class="left">
+                                    <dl>
+                                        <dt>Title</dt>
+                                        <dd class="txt"><input type="text" placeholder="Name"></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Publisher</dt>
+                                        <dd class="txt"><input type="text" placeholder="Name"></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Year of publication</dt>
+                                        <dd class="txt"><input type="text" placeholder="Name"></dd>
+                                    </dl>
+                                </div>          
+    
+                                <div class="right">
+                                    <dl>
+                                        <dt>Writer</dt>
+                                        <dd class="txt"><input type="text" placeholder="Name"></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Category</dt>
+                                        <div class="mobile">
+                                            <dd><div class="box"><input type="checkbox" id="c1" name="cc" /><label for="c1"><span></span>전체</label></div> 
+                                                <div class="box"><input type="checkbox" id="c2" name="cc" /><label for="c2"><span></span>음악</label></div>
+                                                <div class="box"><input type="checkbox" id="c3" name="cc" /><label for="c3"><span></span>글</label></div>
+                                                <div class="box"><input type="checkbox" id="c4" name="cc" /><label for="c4"><span></span>영상</label></div>
+                                            </dd>
+                                        </div>
+                                        <dd class="check"><div class="box"><input type="checkbox" id="c1" name="cc" /><label for="c1"><span></span>전체</label></div> 
+                                            <div class="box"><input type="checkbox" id="c2" name="cc" /><label for="c2"><span></span>DVD</label></div>
+                                            <div class="box"><input type="checkbox" id="c3" name="cc" /><label for="c3"><span></span>VHS</label></div>
+                                            <div class="box"><input type="checkbox" id="c4" name="cc" /><label for="c4"><span></span>CD</label></div>
+                                            <div class="box"><input type="checkbox" id="c5" name="cc" /><label for="c5"><span></span>Blu-Ray</label></div>
+                                        </dd>
+                                        <dd class="check"><div class="box"><input type="checkbox" id="c6" name="cc" /><label for="c6"><span></span>BIFF</label></div>
+                                            <div class="box"><input type="checkbox" id="c7" name="cc" /><label for="c7"><span></span>음악자료</label></div>
+                                            <div class="box"><input type="checkbox" id="c8" name="cc" /><label for="c8"><span></span>시나리오</label></div>
+                                            <div class="box"><input type="checkbox" id="c9" name="cc" /><label for="c9"><span></span>논문</label></div>
+                                            <div class="box"><input type="checkbox" id="c10" name="cc" /><label for="c10"><span></span>정기간행률</label></div>
+                                        </dd>
+                                        <dd class="check"><div class="box"><input type="checkbox" id="c11" name="cc" /><label for="c11"><span></span>격월간지</label></div>
+                                            <div class="box"><input type="checkbox" id="c12" name="cc" /><label for="c12"><span></span>격주간지</label></div>
+                                            <div class="box"><input type="checkbox" id="c13" name="cc" /><label for="c13"><span></span>단행본</label></div>
+                                            <div class="box"><input type="checkbox" id="c14" name="cc" /><label for="c14"><span></span>대본</label></div>
+                                            <div class="box"><input type="checkbox" id="c15" name="cc" /><label for="c15"><span></span>계간지</label></div>
+                                        </dd>
+                                        <dd class="check"><div class="box"><input type="checkbox" id="c16" name="cc" /><label for="c16"><span></span>월간지</label></div>
+                                            <div class="box"><input type="checkbox" id="c17" name="cc" /><label for="c17"><span></span>카탈로그</label></div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <ul class="d_btn">
+                                <li><a href="../../sub/Bibliotheque/search_1.html">Search</a></li>
+                                <li><a href="../../sub/Bibliotheque/search_1.html">Again</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="btn">
+                        <span><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Bibliotheque/login.png" alt="login"></a></span>
+                    </div>
+                </div><!-- inner -->
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+    </div>
+</body>
+
+</html>

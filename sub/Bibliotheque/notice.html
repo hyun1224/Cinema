@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled to be screened</title>
+</head>
+<!-- favicon -->
+<link rel="shortcut icon" href="../images/cinema_favicon.ico"><!-- 타이틀 영역 앞에 표시되는 아이콘  -->
+
+<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<!-- css -->
+<link rel="stylesheet" href="../../css/Bibliotheque/common.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+<link rel="stylesheet" href="../../css/ani.css">
+<link rel="stylesheet" href="../../css/Bibliotheque/notice.css">
+
+<!-- js -->
+<script src="../../js/jquery-3.6.0.min.js"></script><!-- 동작하는 순서가 먼저오기 -->
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // * mdepth2 - 모바일메뉴
+        $('.mdepth2').hide();
+        $('.mgnb > li').click(function () {
+            $(this).children('.mdepth2').stop().slideToggle();
+            $(this).siblings().children('.mdepth2').stop().slideUp();
+        });
+
+        // mgnb
+        $('.m_menu').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '0' /* 값은 따옴표 넣기 '' */
+            }, 1000); // 1초동안
+        });
+        $('.mgnb_back').click(function () {
+            $('.mgnb_wrap').animate({
+                left: '100%'
+            }, 1000);
+        });
+    });
+</script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="w_inner">
+            <header id="header">
+                <div class="inner clearfix">
+                    <h1>
+                        <a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/logo.png"
+                                alt="Bibliothèque"></a>
+                    </h1>
+
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="../Bibliotheque/notice.html">Open space</a><!-- 1차메뉴 -->
+                                <ul class="depth2 clearfix">
+                                    <!-- 2차메뉴 -->
+                                    <li><a href="../Bibliotheque/notice.html">Notice</a></li>
+                                </ul>
+                            </li>
+                        </ul><!-- gnb -->
+                    </nav>
+
+                    <div class="m_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub/Bibliotheque/mlogo.png" alt="모바일 로고"></a>
+                    </div>
+
+                    <div class="m_menu">
+                        <img src="../../images/sub/Bibliotheque/mmenu.png" alt="모바일 메뉴">
+                    </div>
+
+                </div><!-- inner -->
+            </header><!-- header -->
+
+            <div class="mgnb_wrap">
+                <div class="m_inner">
+
+                    <div class="mgnb_logo">
+                        <a href="../../main_1.html"><img src="../../images/sub//Bibliotheque/logo_1.png"
+                                alt="Cinémathèque"></a>
+                    </div>
+
+                    <div class="mgnb_back">
+                        <img src="../../images/sub/Bibliotheque/back.png" alt="뒤로가기">
+                    </div>
+
+                    <ul class="mgnb">
+                        <li><a href="../../main_1.html">Cinémathèque</a></li>
+                        <li>Bibliothèque</a>
+                        <!-- 1차메뉴 -->
+                        <ul class="mdepth2">
+                            <!-- 2차 메뉴 -->
+                            <li><a href="../Bibliotheque/info.html">- Information</a>
+                            </li>
+                            <li><a href="../Bibliotheque/search_1.html">- Search</a>
+                            </li>
+                            <li><a href="../Bibliotheque/notice.html">- Open space</a></li>
+                            <li><a href="../Bibliotheque/film.html">- Film Archive</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+            <main id="container">
+                <div class="inner">
+
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <a href="../../sub/Bibliotheque/notice.html"><img src="../../images/sub/Bibliotheque/search.png"
+                                alt="검색"></a>
+                    </div>
+
+                    <table class="notice">
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>등록일</th>
+                        </tr>
+                        <tr>
+                            <td>공지</td>
+                            <td>[라이브러리 강좌] 라이브러리 강좌 - 스토리텔링 극장 신청 안내(마감)</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>[라이브러리 이벤트]'나의 작은 추천사'이벤트 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>라이브러리 추석 연휴 휴관 안내(2022.09.09(금)-09.12(월))</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>9월 휴관일 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>8/19(금) 코미디페스티벌 행사로 인한 단축 운영 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>8/19(금) 코미디페스티벌 행사로 인한 단축 운영 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>9월 영화사랑방ㅣ한국 고전영화 정기상영회</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>7월 30일(토) 야외 행사로 인한 라이브러리 이용 불편 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>8월 휴관일 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>7월 22일(금) 임시휴관 안내</td>
+                            <td>라이브러리</td>
+                            <td><a href="#"><span>Program</span> Information</a></td>
+                        </tr>
+                    </table>
+
+                    <div class="btn">
+                        <span><a href="../../main_2.html"><img src="../../images/sub/Bibliotheque/home.png"
+                                    alt="home"></a></span>
+                        <span><a href="#"><img src="../../images/sub/Bibliotheque/login.png" alt="login"></a></span>
+                    </div>
+                </div>
+            </main><!-- container -->
+
+            <footer id="footer"></footer><!-- footer -->
+        </div>
+
+    </div><!-- wrap -->
+
+</body>
+
+</html>
